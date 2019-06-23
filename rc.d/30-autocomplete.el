@@ -1,0 +1,11 @@
+;; Better auto completion.
+(require 'auto-complete)
+(ac-config-default)
+(ac-set-trigger-key "TAB")
+(ac-flyspell-workaround)
+(ac-linum-workaround)
+(setq ac-ignore-case 0)
+(setq ac-use-menu-map t)
+(substitute-key-definition 'ac-next     'next-line       ac-menu-map)
+(substitute-key-definition 'ac-previous 'previous-line   ac-menu-map)
+(substitute-key-definition 'ac-isearch  'isearch-forward ac-menu-map)
