@@ -1,0 +1,10 @@
+elpa/
+auto-save-list/
+ac-comphist.dat
+smex-items
+projectile-bookmarks.eld
+var/
+transient/
+eshell/
+*.elc
+*.beam
