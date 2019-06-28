@@ -24,3 +24,7 @@
 
 ;; Open neotree.
 (global-set-key [f8] 'neotree-project-dir)
+
+;; Correct with flyspell.
+(eval-after-load
+  'org '(define-key org-mode-map [f9] 'flyspell-auto-correct-previous-word))
