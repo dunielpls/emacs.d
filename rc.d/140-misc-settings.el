@@ -1,6 +1,9 @@
 ;; Copyright string
 (setq *copyright-organization* "Daniel Isaksen")
 
+;; Disable swap files.
+(setq make-backup-files nil)
+
 ;; Enable column numbers globally
 (column-number-mode t)
 
@@ -16,7 +19,8 @@
 ;; Disable button (tool) bar in GUI.
 (when (and (eq system-type 'gnu/linux) window-system)
   (tool-bar-mode   0)
-  (scroll-bar-mode 0))
+  (scroll-bar-mode 0)
+  (menu-bar-mode -1))
 
 ;; Case sensitive completions.
 (setq dabbrev-case-fold-search nil)
@@ -51,9 +55,9 @@
 (require 'anzu)
 (global-anzu-mode t)
 
-;; Golden ratio is a MUST.
-(golden-ratio-mode t)
-(setq golden-ratio-auto-scale t)
+;; Golden ratio is a MUST. 23-09-2020: Shame it's unmaintained.
+;(golden-ratio-mode t)
+;(setq golden-ratio-auto-scale t)
 
 ;; Modeline progress bar.
 (require 'sml-modeline)
@@ -62,3 +66,6 @@
 
 ;; dockerfile-mode.
 (require 'dockerfile-mode)
+
+;; Line numbers in margin
+(setq global-linum-mode t)
