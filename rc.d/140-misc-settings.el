@@ -40,7 +40,7 @@
 
 ;; Disable backups.
 (setq backup-inhibited           t
-      make-backup-files          0
+      make-backup-files          nil
       auto-save-default          0
       auto-save-list-file-prefix 0)
 

@@ -8,8 +8,8 @@
   "Sort RC files by the number in the filename."
   (cl-stable-sort lst
                   (lambda (a b)
-                  (> (num-from-rc-path b)
-                     (num-from-rc-path a)))))
+                    (> (num-from-rc-path b)
+                       (num-from-rc-path a)))))
 
 (defun load-rc-files (path)
   "List, sort, and load RC files."
@@ -23,6 +23,9 @@
 
 (defconst custom-file    "~/.emacs.d/init-custom.el")
 (defconst rc-config-path "~/.emacs.d/rc.d/")
+
+;; Hack: Disable TLS 1.3 since it's broken in some versions of Emacs.
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 (load          custom-file)
 (load-rc-files rc-config-path)
