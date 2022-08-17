@@ -24,6 +24,13 @@
 (defconst custom-file    "~/.emacs.d/init-custom.el")
 (defconst rc-config-path "~/.emacs.d/rc.d/")
 
+;; Hack: Load $PATH similar to shells if we are in graphical mode.
+(if
+    (or
+     (display-graphic-p)
+     (daemonp))
+    (exec-path-from-shell-initialize))
+
 ;; Hack: Disable TLS 1.3 since it's broken in some versions of Emacs.
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
