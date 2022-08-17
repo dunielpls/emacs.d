@@ -8,3 +8,6 @@ transient/
 eshell/
 *.elc
 *.beam
+eln-cache/
+url/
+

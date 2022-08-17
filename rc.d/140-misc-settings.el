@@ -56,8 +56,7 @@
 (global-anzu-mode t)
 
 ;; Golden ratio is a MUST. 23-09-2020: Shame it's unmaintained.
-;(golden-ratio-mode t)
-;(setq golden-ratio-auto-scale t)
+(golden-ratio-mode t)
 
 ;; Modeline progress bar.
 (require 'sml-modeline)

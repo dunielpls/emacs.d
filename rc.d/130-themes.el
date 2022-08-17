@@ -11,14 +11,13 @@
                           midnight
                           zenburn
                           spolsky
-                          borland-bluex
+                          borland-blue
                           ))
 
 ;; Set the default theme.
 ;; (rand-theme)
-;; (load-theme 'xemacs t)
 (if (display-graphic-p)
-    (load-theme 'spolsky t)
-  (load-theme 'dracula t))
+  (load-theme 'spolsky t)
+(load-theme 'dracula t))
 
 (set-face-attribute 'fringe nil :background nil)
